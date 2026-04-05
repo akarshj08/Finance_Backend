@@ -951,4 +951,4 @@ For support and questions:
 
 ---
 
-**Built with ❤️ using Spring Boot and modern Java technologies By Akarsh Jain**
+**Built with ❤️ using Spring Boot and Modern Java technologies By Akarsh Jain**
