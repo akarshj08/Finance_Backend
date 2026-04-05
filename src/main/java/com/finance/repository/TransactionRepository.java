@@ -1,7 +1,7 @@
 package com.finance.repository;
 
-import com.finance.domain.transaction.Transaction;
-import com.finance.domain.transaction.TransactionType;
+import com.finance.Entity.transaction.Transaction;
+import com.finance.Entity.transaction.TransactionType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,6 @@
 package com.finance.service;
 
-import com.finance.domain.transaction.Category;
+import com.finance.Entity.transaction.Category;
 import com.finance.dto.request.CategoryRequest;
 import com.finance.dto.response.CategoryResponse;
 import com.finance.exception.ResourceNotFoundException;

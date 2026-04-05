@@ -1,7 +1,7 @@
 package com.finance.repository;
 
-import com.finance.domain.user.User;
-import com.finance.domain.user.UserStatus;
+import com.finance.Entity.user.User;
+import com.finance.Entity.user.UserStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

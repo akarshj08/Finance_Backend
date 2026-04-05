@@ -1,4 +1,4 @@
-package com.finance.domain.user;
+package com.finance.Entity.user;
 
 public enum UserStatus {
     ACTIVE,

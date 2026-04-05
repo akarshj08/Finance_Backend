@@ -1,6 +1,6 @@
 package com.finance.service;
 
-import com.finance.domain.transaction.TransactionType;
+import com.finance.Entity.transaction.TransactionType;
 import com.finance.dto.response.DashboardSummary;
 import com.finance.dto.response.TransactionResponse;
 import com.finance.repository.TransactionRepository;

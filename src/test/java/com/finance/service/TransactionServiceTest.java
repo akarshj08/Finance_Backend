@@ -1,11 +1,11 @@
 package com.finance.service;
 
-import com.finance.domain.transaction.Category;
-import com.finance.domain.transaction.Transaction;
-import com.finance.domain.transaction.TransactionType;
-import com.finance.domain.user.Role;
-import com.finance.domain.user.User;
-import com.finance.domain.user.UserStatus;
+import com.finance.Entity.transaction.Category;
+import com.finance.Entity.transaction.Transaction;
+import com.finance.Entity.transaction.TransactionType;
+import com.finance.Entity.user.Role;
+import com.finance.Entity.user.User;
+import com.finance.Entity.user.UserStatus;
 import com.finance.dto.request.TransactionRequest;
 import com.finance.dto.response.TransactionResponse;
 import com.finance.exception.ResourceNotFoundException;

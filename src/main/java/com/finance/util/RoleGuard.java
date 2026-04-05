@@ -1,6 +1,6 @@
 package com.finance.util;
 
-import com.finance.domain.user.Role;
+import com.finance.Entity.user.Role;
 import com.finance.exception.AccessDeniedException;
 import com.finance.security.CustomUserDetails;
 import org.springframework.security.core.Authentication;

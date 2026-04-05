@@ -1,8 +1,8 @@
 package com.finance.security;
 
-import com.finance.domain.user.Role;
-import com.finance.domain.user.User;
-import com.finance.domain.user.UserStatus;
+import com.finance.Entity.user.Role;
+import com.finance.Entity.user.User;
+import com.finance.Entity.user.UserStatus;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,6 +1,6 @@
 package com.finance.controller;
 
-import com.finance.domain.user.UserStatus;
+import com.finance.Entity.user.UserStatus;
 import com.finance.dto.request.CreateUserRequest;
 import com.finance.dto.request.UpdateUserRequest;
 import com.finance.dto.response.PagedResponse;

@@ -1,9 +1,9 @@
 package com.finance.service;
 
-import com.finance.domain.transaction.Category;
-import com.finance.domain.transaction.Transaction;
-import com.finance.domain.transaction.TransactionType;
-import com.finance.domain.user.User;
+import com.finance.Entity.transaction.Category;
+import com.finance.Entity.transaction.Transaction;
+import com.finance.Entity.transaction.TransactionType;
+import com.finance.Entity.user.User;
 import com.finance.dto.request.TransactionRequest;
 import com.finance.dto.response.PagedResponse;
 import com.finance.dto.response.TransactionResponse;

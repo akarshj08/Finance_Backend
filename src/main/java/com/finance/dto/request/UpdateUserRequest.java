@@ -1,7 +1,7 @@
 package com.finance.dto.request;
 
-import com.finance.domain.user.Role;
-import com.finance.domain.user.UserStatus;
+import com.finance.Entity.user.Role;
+import com.finance.Entity.user.UserStatus;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 

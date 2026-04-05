@@ -1,4 +1,4 @@
-package com.finance.config;
+package com.finance.Configuration;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;

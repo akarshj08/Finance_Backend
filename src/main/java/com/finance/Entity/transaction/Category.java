@@ -1,4 +1,4 @@
-package com.finance.domain.transaction;
+package com.finance.Entity.transaction;
 
 import jakarta.persistence.*;
 import lombok.*;

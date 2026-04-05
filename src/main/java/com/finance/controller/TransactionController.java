@@ -1,6 +1,6 @@
 package com.finance.controller;
 
-import com.finance.domain.transaction.TransactionType;
+import com.finance.Entity.transaction.TransactionType;
 import com.finance.dto.request.TransactionRequest;
 import com.finance.dto.response.PagedResponse;
 import com.finance.dto.response.TransactionResponse;

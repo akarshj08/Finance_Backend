@@ -1,6 +1,6 @@
 package com.finance.dto.response;
 
-import com.finance.domain.transaction.Category;
+import com.finance.Entity.transaction.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

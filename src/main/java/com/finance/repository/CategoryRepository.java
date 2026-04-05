@@ -1,6 +1,6 @@
 package com.finance.repository;
 
-import com.finance.domain.transaction.Category;
+import com.finance.Entity.transaction.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

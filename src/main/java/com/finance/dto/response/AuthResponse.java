@@ -1,6 +1,6 @@
 package com.finance.dto.response;
 
-import com.finance.domain.user.Role;
+import com.finance.Entity.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

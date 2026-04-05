@@ -1,4 +1,4 @@
-package com.finance.config;
+package com.finance.Configuration;
 
 import com.finance.security.JwtAuthFilter;
 import lombok.RequiredArgsConstructor;

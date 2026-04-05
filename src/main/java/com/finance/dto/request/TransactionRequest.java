@@ -1,6 +1,6 @@
 package com.finance.dto.request;
 
-import com.finance.domain.transaction.TransactionType;
+import com.finance.Entity.transaction.TransactionType;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 

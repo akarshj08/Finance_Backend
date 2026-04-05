@@ -1,6 +1,6 @@
 package com.finance.dto.request;
 
-import com.finance.domain.user.Role;
+import com.finance.Entity.user.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,7 +1,7 @@
 package com.finance.service;
 
-import com.finance.domain.user.User;
-import com.finance.domain.user.UserStatus;
+import com.finance.Entity.user.User;
+import com.finance.Entity.user.UserStatus;
 import com.finance.dto.request.CreateUserRequest;
 import com.finance.dto.request.UpdateUserRequest;
 import com.finance.dto.response.PagedResponse;

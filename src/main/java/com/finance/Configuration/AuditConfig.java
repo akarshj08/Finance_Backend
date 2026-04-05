@@ -1,4 +1,4 @@
-package com.finance.config;
+package com.finance.Configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
