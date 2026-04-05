@@ -16,7 +16,6 @@ import java.util.List;
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
-    // filtered list (not deleted)
     @Query("""
             SELECT t FROM Transaction t
             WHERE t.deleted = false
@@ -33,7 +32,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
             @Param("to") LocalDate to,
             Pageable pageable);
 
-    // total by type
+    // total by type (works for INCOME, EXPENSE and INVESTMENT)
     @Query("SELECT COALESCE(SUM(t.amount), 0) FROM Transaction t WHERE t.deleted = false AND t.type = :type")
     BigDecimal sumByType(@Param("type") TransactionType type);
 
@@ -48,7 +47,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
             @Param("from") LocalDate from,
             @Param("to") LocalDate to);
 
-    // category-wise totals
+    // category-wise totals (now includes INVESTMENT automatically)
     @Query("""
             SELECT t.category.name, t.type, COALESCE(SUM(t.amount), 0)
             FROM Transaction t
@@ -58,7 +57,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
             """)
     List<Object[]> categoryWiseTotals();
 
-    // monthly trend: year, month, type, total
+    // monthly trend (now includes INVESTMENT automatically)
     @Query("""
             SELECT YEAR(t.date), MONTH(t.date), t.type, COALESCE(SUM(t.amount), 0)
             FROM Transaction t
@@ -68,7 +67,20 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
             """)
     List<Object[]> monthlyTrend(@Param("from") LocalDate from);
 
-    // recent transactions (not deleted)
+    // recent transactions
     @Query("SELECT t FROM Transaction t WHERE t.deleted = false ORDER BY t.date DESC, t.createdAt DESC")
     List<Transaction> findRecentTransactions(Pageable pageable);
+
+    // investment only transactions for date range   ← new
+    @Query("""
+            SELECT t FROM Transaction t
+            WHERE t.deleted = false AND t.type = 'INVESTMENT'
+              AND (:from IS NULL OR t.date >= :from)
+              AND (:to IS NULL OR t.date <= :to)
+            ORDER BY t.date DESC
+            """)
+    List<Transaction> findInvestments(
+            @Param("from") LocalDate from,
+            @Param("to") LocalDate to,
+            Pageable pageable);
 }

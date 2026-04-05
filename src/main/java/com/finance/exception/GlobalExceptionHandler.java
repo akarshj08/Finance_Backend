@@ -74,7 +74,7 @@ public class GlobalExceptionHandler
             errors.put(field, message);
         });
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(ApiResponse.success("Validation failed", errors));
+                .body(ApiResponse.error("Validation failed", errors));
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)

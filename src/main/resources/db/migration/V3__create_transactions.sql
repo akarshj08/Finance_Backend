@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS transactions (
     id          BIGSERIAL PRIMARY KEY,
     amount      NUMERIC(15,2)   NOT NULL CHECK (amount > 0),
-    type        VARCHAR(20)     NOT NULL CHECK (type IN ('INCOME','EXPENSE')),
+    type        VARCHAR(20)     NOT NULL CHECK (type IN ('INCOME','EXPENSE','INVESTMENT')),
     category_id BIGINT          REFERENCES categories(id) ON DELETE SET NULL,
     date        DATE            NOT NULL,
     notes       VARCHAR(500),

@@ -23,19 +23,19 @@ public class DashboardService {
     public DashboardSummary getSummary() {
         BigDecimal totalIncome   = transactionRepository.sumByType(TransactionType.INCOME);
         BigDecimal totalExpenses = transactionRepository.sumByType(TransactionType.EXPENSE);
-        BigDecimal netBalance    = totalIncome.subtract(totalExpenses);
+        BigDecimal totalInvestments = transactionRepository.sumByType(TransactionType.INVESTMENT);
+        BigDecimal netBalance = totalIncome.subtract(totalExpenses).subtract(totalInvestments);
 
         List<DashboardSummary.CategoryTotal> categoryTotals = transactionRepository
                 .categoryWiseTotals()
                 .stream()
                 .map(row -> DashboardSummary.CategoryTotal.builder()
                         .categoryName((String) row[0])
-                        .type((String) row[1])
+                        .type(row[1].toString())
                         .total((BigDecimal) row[2])
                         .build())
                 .toList();
 
-        // last 6 months of monthly trends
         List<DashboardSummary.MonthlyTrend> monthlyTrends = transactionRepository
                 .monthlyTrend(DateRangeUtil.monthsAgo(6))
                 .stream()
@@ -56,6 +56,7 @@ public class DashboardService {
         return DashboardSummary.builder()
                 .totalIncome(totalIncome)
                 .totalExpenses(totalExpenses)
+                .totalInvestments(totalInvestments)
                 .netBalance(netBalance)
                 .categoryTotals(categoryTotals)
                 .monthlyTrends(monthlyTrends)
@@ -67,11 +68,14 @@ public class DashboardService {
     public DashboardSummary getSummaryForDateRange(java.time.LocalDate from, java.time.LocalDate to) {
         BigDecimal totalIncome   = transactionRepository.sumByTypeAndDateRange(TransactionType.INCOME, from, to);
         BigDecimal totalExpenses = transactionRepository.sumByTypeAndDateRange(TransactionType.EXPENSE, from, to);
-        BigDecimal netBalance    = totalIncome.subtract(totalExpenses);
+        BigDecimal totalInvestments = transactionRepository.sumByTypeAndDateRange(TransactionType.INVESTMENT, from, to);
+        BigDecimal netBalance = totalIncome.subtract(totalExpenses).subtract(totalInvestments);
+
 
         return DashboardSummary.builder()
                 .totalIncome(totalIncome)
                 .totalExpenses(totalExpenses)
+                .totalInvestments(totalInvestments)
                 .netBalance(netBalance)
                 .build();
     }

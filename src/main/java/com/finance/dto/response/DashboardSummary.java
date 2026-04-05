@@ -13,6 +13,7 @@ import java.util.Map;
 public class DashboardSummary {
     private BigDecimal totalIncome;
     private BigDecimal totalExpenses;
+    private BigDecimal totalInvestments;
     private BigDecimal netBalance;
     private List<CategoryTotal> categoryTotals;
     private List<MonthlyTrend> monthlyTrends;
