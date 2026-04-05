@@ -30,6 +30,7 @@ public class AuthService {
                 .tokenType("Bearer")
                 .userId(user.getId())
                 .email(user.getEmail())
+                .fullName(user.getFullName())
                 .role(user.getRole())
                 .build();
     }

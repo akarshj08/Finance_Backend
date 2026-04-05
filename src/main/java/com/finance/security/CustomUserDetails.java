@@ -19,6 +19,7 @@ public class CustomUserDetails implements UserDetails {
     private final String password;
     private final Role role;
     private final boolean active;
+    private final String fullName;
 
     public CustomUserDetails(User user) {
         this.id = user.getId();
@@ -26,6 +27,7 @@ public class CustomUserDetails implements UserDetails {
         this.password = user.getPassword();
         this.role = user.getRole();
         this.active = user.getStatus() == UserStatus.ACTIVE;
+        this.fullName = user.getFullName();
     }
 
     @Override
