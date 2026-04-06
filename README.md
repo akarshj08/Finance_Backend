@@ -13,6 +13,9 @@
 
 </div>
 
+### Live API Documentation
+- **Swagger UI**: `http://65.0.74.15:8080/swagger-ui/index.html#/`
+
 ---
 
 ## Table of Contents
@@ -35,6 +38,7 @@
 - [Request & Response Format](#request--response-format)
 - [Validation & Error Handling](#validation--error-handling)
 - [Unit Testing](#unit-testing)
+- [AWS Production Deployment](#aws-production-deployment)
 - [Swagger UI](#swagger-ui)
 - [Assumptions & Design Decisions](#assumptions--design-decisions)
 
@@ -109,6 +113,7 @@ The system is built following clean architecture principles with strict separati
 | Boilerplate Reduction | Lombok |
 | Build Tool | Maven |
 | Testing | JUnit 5, Mockito, MockMvc |
+| Deployment | AWS EC2, RDS
 
 ---
 
@@ -972,6 +977,19 @@ AuthControllerTest
   ✅ login_shouldReturn401_whenCredentialsAreWrong
   ✅ login_shouldReturn401_whenAccountIsInactive
 ```
+
+---
+
+## AWS Production Deployment
+
+This project is successfully deployed and running on AWS cloud infrastructure using:
+- **Amazon EC2** for application hosting
+- **Amazon RDS PostgreSQL** for database services
+
+### Live API Documentation
+- **Swagger UI**: `http://65.0.74.15:8080/swagger-ui/index.html#/`
+
+The production deployment demonstrates the application's readiness for real-world use with proper security, scalability, and monitoring.
 
 ---
 
