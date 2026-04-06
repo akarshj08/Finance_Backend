@@ -14,7 +14,7 @@
 </div>
 
 ### Live API Documentation
-- **Swagger UI**: `http://65.0.74.15:8080/swagger-ui/index.html#/`
+- **Swagger UI**: http://65.0.74.15:8080/swagger-ui/index.html#/
 
 ---
 
@@ -987,7 +987,7 @@ This project is successfully deployed and running on AWS cloud infrastructure us
 - **Amazon RDS PostgreSQL** for database services
 
 ### Live API Documentation
-- **Swagger UI**: `http://65.0.74.15:8080/swagger-ui/index.html#/`
+- **Swagger UI**: http://65.0.74.15:8080/swagger-ui/index.html#/
 
 The production deployment demonstrates the application's readiness for real-world use with proper security, scalability, and monitoring.
 
@@ -1008,7 +1008,7 @@ All endpoints are documented with request/response schemas. To authorize in Swag
 3. Enter: `Bearer <paste-token-here>`
 4. Click **Authorize** → all endpoints are now unlocked
 
-OpenAPI JSON spec available at: `http://localhost:8080/v3/api-docs`
+OpenAPI JSON spec available at: 'http://localhost:8080/v3/api-docs'
 
 ---
 
